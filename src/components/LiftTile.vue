@@ -22,4 +22,5 @@ export default {
         height: 25px;
         background: grey;
     }
+
 </style>
