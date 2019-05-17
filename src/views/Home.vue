@@ -1,18 +1,30 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+    
+    <StationLifts 
+      v-for="station in mockStationData"
+      :key="station.stationCode"
+      :station="station"
+    />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+
+import StationLifts from '@/components/StationLifts.vue'
+
+import mockStationData from '@/assets/mock-data.json'
 
 export default {
   name: 'home',
   components: {
-    HelloWorld
-  }
+    StationLifts
+  },
+  data(){
+    return{
+      mockStationData,
+    }
+  },
 }
 </script>
