@@ -1,0 +1,14 @@
+
+@font-face {
+    font-family: 'NewJohnson';
+    src: url('new-Johnston.woff') format('woff'),
+         url('new-Johnston.ttf')  format('truetype');
+  }
+
+@import url(/new-johnson.woff);
+
+
+h1, h2, h3, h4, h5, .heading {
+    font-family: 'NewJohnson', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}

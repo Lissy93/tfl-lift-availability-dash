@@ -1,0 +1,61 @@
+[
+    {
+        "stationCode": "KGX",
+        "stationName": "Kings Cross",
+        "stepFree": true,
+        "lifts": [
+            {
+                "name": "Platform 1 North",
+                "status": 2,
+                "statusDescription": "Operational"
+            },
+            {
+                "name": "Platform 1 South",
+                "status": 2,
+                "statusDescription": "Operational"
+            },
+            {
+                "name": "Platform 2 North",
+                "status": 1,
+                "statusDescription": "Heavily Congested"
+            },
+            {
+                "name": "Platform 2 South",
+                "status": 0,
+                "statusDescription": "Critical Fault Detected"
+            },
+            {
+                "name": "Ticket Hall",
+                "status": 2,
+                "statusDescription": "Operational"
+            }
+        ]
+    },
+    {
+        "stationCode": "EUS",
+        "stationName": "Euston",
+        "stepFree": true,
+        "lifts": [
+            {
+                "name": "Victoria Line Southbound",
+                "status": 2,
+                "statusDescription": "Operational"
+            },
+            {
+                "name": "Victoria Line Northbound",
+                "status": 1,
+                "statusDescription": "Heavily Congested"
+            },
+            {
+                "name": "Ticket Hall 1",
+                "status": 2,
+                "statusDescription": "Routine Maintenance"
+            },
+            {
+                "name": "Ticket Hall 2",
+                "status": 2,
+                "statusDescription": "Operational"
+            }
+        ]
+    }
+]
