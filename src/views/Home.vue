@@ -1,6 +1,8 @@
 <template>
   <div class="home">
 
+    <ChartSection />
+
     <BigSearchBar />
 
     <StationLifts 
@@ -15,6 +17,7 @@
 
 import StationLifts from '@/components/StationLifts.vue'
 import BigSearchBar from '@/components/BigSearchBar.vue';
+import ChartSection from '@/components/ChartSection.vue';
 
 import mockStationData from '@/assets/mock-data.json'
 
@@ -23,6 +26,7 @@ export default {
   components: {
     StationLifts,
     BigSearchBar,
+    ChartSection,
   },
   data(){
     return{
