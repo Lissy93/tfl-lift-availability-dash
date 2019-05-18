@@ -1,7 +1,11 @@
 <template>
     <el-card>
         <h2>Search </h2>
-        <el-input placeholder="Start typint station name or code" v-model="input"></el-input>
+        <el-input 
+          placeholder="Start typint station name or code"
+          v-model="input"
+          v-on:input="userIsTypingShit"
+        ></el-input>
     </el-card>
 </template>
 
@@ -12,6 +16,11 @@ export default {
   data() {
     return {
       input: ''
+    }
+  },
+  methods: {
+    userIsTypingShit(stuff) {
+      this.$emit('user-is-searchin', stuff)
     }
   },
 }

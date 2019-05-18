@@ -4,7 +4,8 @@
             <el-collapse-item name="tab">
                 <template slot="title">
                     <div class="station-header">
-                    <h3>{{ station.stationName }}</h3>
+                    <h3>{{ station.name }}</h3>
+                    <span class="tla">({{station.tla}})</span>
                     <StatusChip :statusCode="makeStatusCode"/>
                 </div>
                 </template>
@@ -29,6 +30,7 @@ export default {
   computed: {
     makeStatusCode() {
         const lifts = this.station.lifts;
+        if(!lifts) return 3;
         return Math.min.apply(Math, lifts.map((lift) => lift.status));
       }
   },
@@ -56,6 +58,11 @@ export default {
                 margin-right: 8px;
                 font-size: 1.8em;
             }
+            .tla {
+                margin: 25px 10px 0 0;
+                font-size: 1em;
+            }
+            
         }
         .station-lifts {
             display: flex;

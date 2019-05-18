@@ -1,6 +1,7 @@
 <template>
     <div class="station-lifts">
         <el-table
+        v-if="liftData.length > 0"
         :data="liftData"
         style="width: 100%">
             <el-table-column
@@ -28,14 +29,28 @@
                 label="Details">
             </el-table-column>
         </el-table>
-        <el-button
-            type="primary"
-            plain
-            class="alert-button"
-            @click="dialogVisible = true"
-        >
-            Create Alert
-        </el-button>
+
+        <div class="tile-footer">
+            <el-tooltip effect="dark" content="Save station to favourites" placement="top">
+                <el-button plain icon="el-icon-star-off" circle></el-button>
+            </el-tooltip>
+
+            <el-tooltip 
+                effect="dark" placement="top"
+                content="Send SMS alerts when lifts in this station  statuschange">
+                <el-button
+                    type="primary"
+                    plain
+                    class="alert-button"
+                    @click="dialogVisible = true"
+                >
+                    Create Alert
+                    <i class="el-icon-message-solid icon" />
+                </el-button>
+            </el-tooltip>
+        </div>
+
+       
 
         <el-dialog
             :visible.sync="dialogVisible"
@@ -86,6 +101,13 @@ export default {
 
 <style scoped lang="scss">
 
+.tile-footer {
+    .el-button {
+                align-self: flex-start;
+                margin: 15px 15px 0;
+            }
+}
+
     .station-lifts {
         align-items: flex-end;
     }
@@ -93,6 +115,10 @@ export default {
     .alert-button {
         width: 15em;
         margin: 15px 10px -10px 0;
+        .icon {
+            margin: 0 5px;
+            font-size: 1.2em;
+        }
     }
 
     /deep/ .el-icon-success, 

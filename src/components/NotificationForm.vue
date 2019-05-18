@@ -84,6 +84,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+    h2 {
+      font-size: 2em;
+      margin: 0 10px;
+    }
     form {
         display: flex;
         flex-direction: column;
