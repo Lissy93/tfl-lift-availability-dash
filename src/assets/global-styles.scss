@@ -7,9 +7,14 @@
 
 h1, h2, h3, h4, h5, .heading {
     font-family: 'NewJohnson', Arial, Helvetica, sans-serif;
+    color: #113B92;
     font-weight: normal;
 }
 
 p, span, a, div {
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.invert-heading {
+  background: #2d3039;
 }

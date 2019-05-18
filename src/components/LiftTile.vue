@@ -1,6 +1,8 @@
 <template>
   <div class="lift-tile">
-
+      <span class="lift-name">{{ liftName }}</span>
+      <span class="lift-status">{{ statusCode }}</span>
+      
   </div>
 </template>
 
@@ -18,9 +20,7 @@ export default {
 
 <style scoped lang="scss">
     .lift-tile {
-        width: 60px;
-        height: 25px;
-        background: grey;
+
     }
 
 </style>

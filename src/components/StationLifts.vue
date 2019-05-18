@@ -1,19 +1,25 @@
 <template>
     <el-card class="station-lifts">
-        <div class="station-header">
-            <h3>{{ station.stationName }}</h3>
-            <StatusChip :statusCode="makeStatusCode"/>
-        </div>
-        
-        <LiftTile />
+        <el-collapse v-model="collapseViewActive">
+            <el-collapse-item name="tab">
+                <template slot="title">
+                    <div class="station-header">
+                    <h3>{{ station.stationName }}</h3>
+                    <StatusChip :statusCode="makeStatusCode"/>
+                </div>
+                </template>
+                <div>
+                    <StationStatusTable :liftData="station.lifts"/>
+                </div>
+            </el-collapse-item>
+        </el-collapse>
     </el-card>
 </template>
 
 <script>
 
-import LiftTile from '@/components/LiftTile.vue'
 import StatusChip from '@/components/StatusChip.vue'
-
+import StationStatusTable from '@/components/StationStatusTable.vue';
 
 export default {
   name: 'StationLifts',
@@ -26,9 +32,14 @@ export default {
         return Math.min.apply(Math, lifts.map((lift) => lift.status));
       }
   },
+  data() {
+      return {
+        collapseViewActive: ['tab']
+      };
+    },
   components: {
-    LiftTile,
     StatusChip,
+    StationStatusTable,
   }
 }
 </script>
@@ -43,7 +54,12 @@ export default {
                 justify-content: center;
                 align-items: center;
                 margin-right: 8px;
+                font-size: 1.8em;
             }
+        }
+        .station-lifts {
+            display: flex;
+            flex-direction: column;
         }
     }
     h3 {
