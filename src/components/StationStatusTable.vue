@@ -28,15 +28,41 @@
                 label="Details">
             </el-table-column>
         </el-table>
+        <el-button
+            type="primary"
+            plain
+            class="alert-button"
+            @click="dialogVisible = true"
+        >
+            Create Alert
+        </el-button>
+
+        <el-dialog
+            :visible.sync="dialogVisible"
+            width="50%"
+        >
+            <NotificationForm />
+        </el-dialog>
+
     </div>
 </template>
 
 <script>
+import NotificationForm from '@/components/NotificationForm.vue';
+
 export default {
   name: 'StationStatusTable',
   props: {
     liftData: Array,
   },
+  components: {
+      NotificationForm,
+  },
+  data() {
+      return {
+        dialogVisible: false
+      };
+    },
   methods: {
     makeStatusName(statusCode) {
         switch (statusCode) {
@@ -60,6 +86,15 @@ export default {
 
 <style scoped lang="scss">
 
+    .station-lifts {
+        align-items: flex-end;
+    }
+
+    .alert-button {
+        width: 15em;
+        margin: 15px 10px -10px 0;
+    }
+
     /deep/ .el-icon-success, 
     .el-icon-warning,
     .el-icon-error,
@@ -74,6 +109,11 @@ export default {
 
     /deep/ .el-table_1_column_1 {
         font-weight: bold;
+    }
+
+    /deep/ .el-dialog__body,
+    el-dialog__header {
+        padding: 10px;
     }
 
     .color-success {

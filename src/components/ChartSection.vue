@@ -178,7 +178,7 @@ export default {
     display: flex;
     flex-direction: row;
     margin: 10px;
-    height: 320px;
+    //height: 320px;
 }
 
 h2 {
