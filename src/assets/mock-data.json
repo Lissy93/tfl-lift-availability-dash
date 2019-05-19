@@ -113,7 +113,39 @@
     },
     {  
        "tla":"BNK",
-       "name":"Bank"
+       "name":"Bank",
+       "lifts": [
+         {
+         "name": "Central Line North",
+         "status": 2,
+         "statusDescription": "Operational"
+        },
+        {
+         "name": "Central Line South",
+         "status": 2,
+         "statusDescription": "Operational"
+     },
+     {
+         "name": "Northern 1",
+         "status": 2,
+         "statusDescription": "Operational"
+      },
+      {
+         "name": "Northern 2",
+         "status": 1,
+         "statusDescription": "Problems Identified"
+      },
+      {
+         "name": "Northern 3",
+         "status": 1,
+         "statusDescription": "Problems Identified"
+      },
+      {
+         "name": "Northern 4",
+         "status": 1,
+         "statusDescription": "Problems Identified"
+      }
+      ]
     },
     {  
        "tla":"BAR",
@@ -405,7 +437,14 @@
     },
     {  
        "tla":"EMB",
-       "name":"Embankment"
+       "name":"Embankment",
+       "lifts": [
+         {
+         "name": "Circle/ District",
+         "status": 2,
+         "statusDescription": "Operational"
+        }
+      ]
     },
     {  
        "tla":"EPP",
