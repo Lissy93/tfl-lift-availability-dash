@@ -21,8 +21,8 @@
 
 import StationLifts from '@/components/StationLifts.vue'
 import BigSearchBar from '@/components/BigSearchBar.vue';
-
 import mockStationData from '@/assets/mock-data.json'
+// import axios from 'axios';
 
 export default {
   name: 'home',
@@ -48,6 +48,14 @@ export default {
       })
     }
   },
+  mounted () {
+    // I will put initial network request to our API here. And then manage the logic in each component
+    // axios
+    //   .get('https://unifiedliftapi.azurewebsites.net/api/stationSearch?station=BARK')
+    //   .then(response => (
+    //     console.log(response)
+    //   ))
+  }
 }
 </script>
 

@@ -5,7 +5,7 @@
                 <template slot="title">
                     <div class="station-header">
                     <h3>{{ station.name }}</h3>
-                    <span class="tla">({{station.tla}})</span>
+                    <span class="tla" v-if="station.tla">({{station.tla}})</span>
                     <StatusChip :statusCode="makeStatusCode"/>
                 </div>
                 </template>

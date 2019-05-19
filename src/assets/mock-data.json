@@ -1,32 +1,39 @@
 [  
     {  
        "tla":"",
-       "name":"Abbey Road"
+       "name":"Abbey Road",
+       "lifts": [
+         {
+             "name": "North Lift",
+             "status": 0,
+             "statusDescription": "Fault reported"
+         },
+         {
+             "name": "South Lift",
+             "status": 2,
+             "statusDescription": "Operational"
+         }
+      ]
     },
     {  
        "tla":"ACT",
-       "name":"Acton Town"
+       "name":"Acton Town",
+       "lifts": [
+         {
+             "name": "Lift 1",
+             "status": 2,
+             "statusDescription": "Operational"
+         },
+         {
+             "name": "Lift 2",
+             "status": 1,
+             "statusDescription": "Problems Detected"
+         }
+      ]
     },
     {  
        "tla":"ALD",
-       "name":"Aldgate",
-       "lifts": [
-        {
-            "name": "Platform 1 North",
-            "status": 2,
-            "statusDescription": "Operational"
-        },
-        {
-            "name": "Platform 1 South",
-            "status": 2,
-            "statusDescription": "Operational"
-        },
-        {
-            "name": "Ticket Hall",
-            "status": 2,
-            "statusDescription": "Operational"
-        }
-       ]
+       "name":"Aldgate"
     },
     {  
        "tla":"ALE",
@@ -34,11 +41,30 @@
     },
     {  
        "tla":"",
-       "name":"All Saints"
+       "name":"All Saints",
+       "lifts": [
+         {
+             "name": "DLR 1",
+             "status": 2,
+             "statusDescription": "Operational"
+         },
+         {
+             "name": "DLR 2",
+             "status": 0,
+             "statusDescription": "Routine Maintenance"
+         }
+        ]
     },
     {  
        "tla":"ALP",
-       "name":"Alperton"
+       "name":"Alperton",
+       "lifts": [
+         {
+             "name": "Lift",
+             "status": 2,
+             "statusDescription": "Operational"
+         }
+        ]
     },
     {  
        "tla":"AME",
@@ -62,7 +88,24 @@
     },
     {  
        "tla":"BST",
-       "name":"Baker Street"
+       "name":"Baker Street",
+       "lifts": [
+         {
+         "name": "Lift 1",
+         "status": 0,
+         "statusDescription": "Fault reported"
+        },
+        {
+         "name": "Lift 2",
+         "status": 0,
+         "statusDescription": "Fault reported"
+     },
+     {
+         "name": "Lift 3",
+         "status": 0,
+         "statusDescription": "Fault reported"
+      }
+      ]
     },
     {  
        "tla":"BAL",

@@ -2,7 +2,7 @@
     <el-card>
         <h2>Search </h2>
         <el-input 
-          placeholder="Start typint station name or code"
+          placeholder="Start typing station name or code"
           v-model="input"
           v-on:input="userIsTypingShit"
         ></el-input>

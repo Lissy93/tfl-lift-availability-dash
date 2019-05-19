@@ -1,5 +1,5 @@
 <template>
-    <div class="station-lifts">
+    <div class="station-lifts" v-if="liftData">
         <el-table
         v-if="liftData.length > 0"
         :data="liftData"
@@ -31,6 +31,10 @@
         </el-table>
 
         <div class="tile-footer">
+            <el-tooltip effect="dark" placement="top"
+                content="This is how likley it is, that the lift will remain operational, based on historic data">
+                <span class="probability">xx% Propbability of remaining abailible</span>
+            </el-tooltip>
             <el-tooltip effect="dark" content="Save station to favourites" placement="top">
                 <el-button plain icon="el-icon-star-off" circle></el-button>
             </el-tooltip>
@@ -59,6 +63,10 @@
             <NotificationForm />
         </el-dialog>
 
+    </div>
+
+    <div v-else>
+        <span class="unavailible">There is no lift data availible for this station</span>
     </div>
 </template>
 
@@ -103,9 +111,18 @@ export default {
 
 .tile-footer {
     .el-button {
-                align-self: flex-start;
-                margin: 15px 15px 0;
-            }
+        align-self: flex-start;
+        margin: 15px 15px 0;
+    }
+}
+.probability {
+    color: #808080;
+}
+
+.unavailible {
+    font-size: 2em;
+    color: #8b8b8b;
+    font-style: italic;
 }
 
     .station-lifts {
