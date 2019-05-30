@@ -12,9 +12,9 @@
 This is the dashboard component for our hackathon project. It is now using fake data, since we don't have proper access to all the tfl CTTV cameras in real-time :(
 
 
-<p align="center"><img src ="screenshot/demo.gif" /></p>
-
 ### Screenshots
+
+<p align="center"><img src ="screenshot/demo.gif" /></p>
 
 ![screenshot](screenshot/screenshots.png)
 
